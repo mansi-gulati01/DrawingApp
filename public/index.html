@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Drawing App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Let's Draw</h1>
+    </header>
+    <div class="row" id="wrapper">
+      <canvas class="col-sm-7" id="canvas" width="650px" height="550px">
+      </canvas>
+      <div id="controls" class="col-sm-2">
+        <div id="widthControl" title="choose a line width">
+          <div class="widthExample"></div>
+          <div class="widthExample"></div>
+          <div class="widthExample"></div>
+          <div class="widthExample"></div>
+          <div class="widthExample"></div>
+        </div>
+
+        <div id="palette" title="choose color"></div>
+        <div id="clearBtn" title="clear the canvas">
+          <i class="fas fa-trash"></i>
+        </div>
+        <div id="counterDiv">
+          <span id="counter">0</span> users<br />
+          are online
+        </div>
+      </div>
+    </div>
+
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
